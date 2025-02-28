@@ -22,8 +22,8 @@ export default function HeroSection() {
       {/* Imagem */}
       <div className="xl:w-1/2 xl:block mt-8 xl:mt-0 z-10">
         <img 
-          src="" 
-          alt="Imagem de Capa" 
+          src="teste.png" 
+          alt="Sua Foto" 
           className="w-full h-full object-cover" 
         />
       </div>
