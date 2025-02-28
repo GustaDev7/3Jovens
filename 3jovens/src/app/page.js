@@ -4,8 +4,9 @@ import FeaturesSection from "./components/FeatureSection";
 import CTASection from "./components/CTASection";
 import FAQAccordion from "./components/Faq";
 import Portifolio from "./components/Portifolio";
-import LogoBanner from "./components/LogoBanner";
-import QuemSomos from "./components/QuemSomos";
+import Footer from "./components/Footer";
+import PublicoAlvo from "./components/PublicoAlvo";
+import Depoimentos from "./components/Depoimentos";
 
 export default function Home() {
   return (
@@ -13,8 +14,11 @@ export default function Home() {
       <HeroSection />
       <FeaturesSection />
       <Portifolio /> 
+      <PublicoAlvo />   
       <CTASection />
+      <Depoimentos />
       <FAQAccordion />
+      <Footer />
     </>
   );
 }

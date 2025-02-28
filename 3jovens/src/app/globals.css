@@ -163,15 +163,15 @@
 
 /* Ícone do Card */
 .card img {
-  width: 100px;
+  width: 80px;
+  height: 80px;  
   z-index: 3;
-  padding: 10px;
   background: linear-gradient(to top, #000405, #210471);
   border: 1px solid #6121ff;
-  border-radius: 10px;
+  border-radius: 60%;
   box-shadow: 0 10px 10px #000;
   position: absolute;
-  top: -58px;
+  top: -50px;
   transform: translate(-50%);
 }
 
@@ -211,3 +211,32 @@
 }
 
 /* CSS customizado*/
+
+/* Define a largura da barra de rolagem */
+::-webkit-scrollbar {
+  width: auto; /* Largura da barra de rolagem */
+  height: auto; /* Altura da barra de rolagem, caso você queira personalizar a rolagem horizontal também */
+}
+
+/* Define a cor de fundo da trilha da barra de rolagem com um gradiente */
+::-webkit-scrollbar-track {
+  background: linear-gradient(to bottom, #000000, #2f2f2f, #000000); /* Gradiente de preto para cinza escuro e volta para preto */
+  border-radius: 10px; /* Arredondamento das bordas da trilha */
+}
+
+/* Define a aparência da parte "pegajosa" da barra de rolagem (a barrinha) */
+::-webkit-scrollbar-thumb {
+  background-color: #6121ff; /* Cor da barrinha (polegar) */
+  border-radius: 10px; /* Arredondamento das bordas da barrinha */
+}
+
+/* Define a aparência quando o polegar da barra de rolagem é ativado (hover) */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #1e0c8f; /* Cor da barrinha quando em hover */
+}
+
+/* Para navegadores Firefox */
+* {
+  /* Barra de rolagem com tamanho normal */
+  scrollbar-color: #6121ff black; /* Cor do thumb e da trilha (com o gradiente no Chrome/Edge/Safari) */
+}

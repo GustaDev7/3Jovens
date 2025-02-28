@@ -20,9 +20,9 @@ export default function FAQAccordion() {
 
   return (
     <div
-      className="relative py-60 flex items-center justify-center p-6  border-t-2 border-transparent px-4 sm:px-6 md:px-12 mx-auto"
+      className="relative py-16 sm:py-24 lg:py-48 flex items-center justify-center border-t-2 border-transparent h-screen px-6 sm:px-12 lg:px-24 mx-auto"
       style={{
-        borderImage: 'linear-gradient(to right, #000000, #6121ff)',
+        borderImage: 'linear-gradient(to left, #000000, #6121ff)',
         borderImageSlice: 1,
       }}
     >
@@ -35,26 +35,29 @@ export default function FAQAccordion() {
         <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black to-transparent"></div>
       </div>
       {/* Content */}
-      <div className="relative max-w-5xl w-full flex flex-col md:flex-row items-start gap-8">
-        <div className="md:w-1/3">
-          <h2 className="text-5xl font-bold text-principal mb-4 ">
+      <div className="relative max-w-7xl w-full flex flex-col lg:flex-row items-start gap-8">
+        {/* Título e Descrição (Esquerda em telas grandes) */}
+        <div className="w-full lg:w-1/3 text-center lg:text-left">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-principal mb-4">
             FAQ
           </h2>
-          <h2 className="text-5xl text-claro font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-claro font-bold mb-4">
             Perguntas <br /> Frequentes
           </h2>
-          <div className="w-2/3 border-b-2 border-principal"></div>
+          <div className="w-2/3 sm:w-1/2 lg:w-2/3 border-b-2 border-principal mx-auto lg:mx-0"></div>
         </div>
-        <div className="md:w-2/3 space-y-4">
+        
+        {/* Perguntas e Respostas */}
+        <div className="w-full lg:w-2/3 space-y-4">
           {faqData.map((item, index) => (
             <div key={index} className="border-b text-lg border-principal rounded-lg shadow-lg overflow-hidden">
               <button
                 onClick={() => toggleAccordion(index)}
-                className={`w-full flex justify-between items-center p-4 text-left transition-colors rounded-lg  ${openIndex === index ? "text-principal" : "text-gray-400"}`}
+                className={`w-full flex justify-between items-center p-4 text-left transition-colors rounded-lg ${openIndex === index ? "text-principal" : "text-gray-400"}`}
               >
-                <span className="font-semibold">{item.question}</span> {/* Acessando item.question */}
+                <span className="font-semibold">{item.question}</span>
                 <FiChevronDown
-                  className={`transition-transform duration-300 ${openIndex === index ? "rotate-180 text-principal" : "rotate-0 text-"}`}
+                  className={`transition-transform duration-300 ${openIndex === index ? "rotate-180 text-principal" : "rotate-0 text-gray-400"}`}
                 />
               </button>
               <AnimatePresence>
@@ -64,7 +67,7 @@ export default function FAQAccordion() {
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.4, ease: "easeInOut" }}
-                    className="overflow-hidden "
+                    className="overflow-hidden"
                   >
                     <div className="p-4 text-gray-300">
                       {item.answer}

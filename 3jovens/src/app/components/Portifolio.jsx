@@ -4,47 +4,49 @@ export default function Portfolio() {
   const projects = [
     {
       category: "PLATAFORMA DE CURSOS",
-      title: "Construtora Hogrefe",
+      title: "Cetma Educacional",
       image: "/cetma.png",
       link: "#",
     },
     {
       category: "SITE INSTITUCIONAL",
-      title: "Lj Santos",
+      title: "Gamboa Ação",
       image: "/gamboa.png",
       link: "#",
     },
     {
       category: "LANDING PAGE",
-      title: "Dr. Victor Mauro",
+      title: "Dr. Lorrane Azevedo",
       image: "/lorrane.png",
       link: "#",
     },
   ];
 
   return (
-    <section className="relative bg-black text-claro py-16">
+    <section className="relative bg-black text-claro py-16 min-h-screen  overflow-hidden">
       {/* Linha decorativa de ponta a ponta */}
       <div className="absolute left-0 w-full z-10">
         <svg width="100%" height="50" viewBox="0 0 1920 50" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M 0 25 L 600 25 L 800 0 L 1200 0 L 1400 25 L 1920 25" stroke="#7F4DFF" strokeWidth="3" fill="none" />
         </svg>
       </div>
-         {/* Luzes animadas */}
-  <div className="absolute top-[15%] right-[calc(50%-800px)] w-[500px] h-[600px] bg-principal rounded-full blur-[150px] opacity-[0.3] mix-blend-screen animate-luz pointer-events-none z-0" />
-  <div className="absolute top-[60%] right-[calc(50%-400px)] w-[10000px] h-[300px] bg-[#7F4DFF] rounded-full blur-[150px] opacity-[0.3] mix-blend-screen animate-luzDelay pointer-events-none z-0" />
-  <div className="absolute top-[15%] left-[calc(50%-800px)] w-[500px] h-[600px] bg-principal rounded-full blur-[150px] opacity-[0.3] mix-blend-screen animate-luz pointer-events-none z-0" />
+
+      {/* Luzes animadas */}
+      <div className="absolute top-[10%] left-[20%] w-[250px] h-[350px] bg-principal rounded-full blur-[100px] opacity-20 animate-pulseSlow pointer-events-none z-0 sm:w-[400px] sm:h-[500px]" />
+      <div className="absolute top-[50%] right-[10%] w-[300px] h-[300px] bg-[#7F4DFF] rounded-full blur-[120px] opacity-20 animate-pulseMedium pointer-events-none z-0 sm:w-[500px] sm:h-[500px]" />
+      <div className="absolute bottom-[10%] left-[50%] -translate-x-1/2 w-[350px] h-[250px] bg-principal rounded-full blur-[100px] opacity-20 animate-pulseFast pointer-events-none z-0 sm:w-[500px] sm:h-[400px]" />
+
       <div className="max-w-6xl mx-auto px-4 text-center relative z-20">
         <h3 className="text-principal font-semibold text-2xl mt-20 tracking-widest">PROJETOS</h3>
         <h2 className="text-3xl md:text-4xl font-semibold mt-2">Conheça nosso portfólio</h2>
       </div>
 
-      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4 max-w-7xl mx-auto relative z-20">
+      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-10 max-w-7xl mx-auto relative z-20">
         {projects.map((project, index) => (
           <div
             key={index}
             className="bg-transparent rounded-lg overflow-hidden flex flex-col items-center pb-8 min-h-[500px] 
-              border border-gray-600 transition duration-300 
+              border border-[#7F4DFF] transition duration-300 
               hover:border-principal hover:shadow-[0_0_50px_var(--tw-shadow-color)] 
               hover:shadow-principal"
           >
@@ -69,7 +71,7 @@ export default function Portfolio() {
             <div className="w-full flex justify-center mt-auto">
               <button
                 onClick={() => window.open(project.link, "_blank")}
-                className="btn w-[90%] bg-blue-500 mt-6 px-6 py-3 rounded-md transition duration-300 ease-in-out font-semibold 
+                className="btn w-[90%] mt-6 px-6 py-3 rounded-md transition duration-300 ease-in-out font-semibold 
                   hover:bg-principal focus:outline-none focus:ring-2 focus:ring-principal focus:ring-offset-2"
               >
                 Visitar site

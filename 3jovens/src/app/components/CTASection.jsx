@@ -142,17 +142,17 @@ export default function Formulario() {
   return (
     <div
       id="formulario"
-      className="relative bg-gradient-to-br from-black via-slate-950 to-black border-t-2 border-transparent text-[#f5f5f5] py-16 px-4 sm:px-6 md:px-12 flex flex-col items-center justify-center mx-auto space-y-8"
+      className="relative bg-gradient-to-br from-black via-slate-950 to-black border-t-2 border-transparent h-screen text-[#f5f5f5] py-16 px-4 sm:px-6 md:px-12 flex flex-col items-center justify-center mx-auto space-y-8"
       style={{
         borderImage: 'linear-gradient(to left, #000000, #6121ff)',
         borderImageSlice: 1,
       }}
     >
-          <InteractiveBackground />
+      <InteractiveBackground />
       <div className="relative z-10 w-full max-w-2xl text-center px-4">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
           Vamos Criar o Seu Site {" "}
-          <span className="text-principal">personalizado</span>
+          <span className="text-principal">Personalizado</span>
         </h2>
         <p className="mt-4 text-gray-300 text-base sm:text-lg">
           Preencha os campos abaixo para que possamos entrar em contato e
@@ -161,10 +161,43 @@ export default function Formulario() {
         </p>
       </div>
       <div className="relative z-10 w-full max-w-xl bg-gradient-to-br from-black via-gray-950 to-black p-6 sm:p-8 md:p-10 rounded-xl shadow-2xl  animate-">
-      <form className="space-y-5 card2" onSubmit={handleSubmit}>
-          <input id="nome" type="text" placeholder="Digite seu nome" value={formData.nome} onChange={handleChange} className="w-full p-4 rounded-md bg-transparent text-white border-b-2 border-principal focus:outline-none" required />
-          <input id="email" type="email" placeholder="Digite seu e-mail" value={formData.email} onChange={handleChange} className="w-full p-4 rounded-md bg-transparent text-white border-b-2 border-principal focus:outline-none" required />
-          <textarea id="mensagem" placeholder="Conte um pouco sobre o seu projeto" value={formData.mensagem} onChange={handleChange} className="w-full p-4 rounded-md bg-transparent text-white border-b-2 border-principal focus:outline-none" rows="4" required></textarea>
+        <form className="space-y-5 card2" onSubmit={handleSubmit}>
+          <input
+            id="nome"
+            type="text"
+            placeholder="Digite seu nome"
+            value={formData.nome}
+            onChange={handleChange}
+            className="w-full p-4 rounded-md bg-transparent text-white border-b-2 border-principal focus:outline-none"
+            required
+          />
+          <input
+            id="email"
+            type="email"
+            placeholder="Digite seu e-mail"
+            value={formData.email}
+            onChange={handleChange}
+            className="w-full p-4 rounded-md bg-transparent text-white border-b-2 border-principal focus:outline-none"
+            required
+          />
+          <input
+            id="whatsapp"
+            type="tel"
+            placeholder="Digite seu WhatsApp"
+            value={formData.whatsapp}
+            onChange={handleChange}
+            className="w-full p-4 rounded-md bg-transparent text-white border-b-2 border-principal focus:outline-none"
+            required
+          />
+          <textarea
+            id="mensagem"
+            placeholder="Conte um pouco sobre o seu projeto"
+            value={formData.mensagem}
+            onChange={handleChange}
+            className="w-full p-4 rounded-md bg-transparent text-white border-b-2 border-principal focus:outline-none"
+            rows="4"
+            required
+          ></textarea>
           <button className="btn w-full bg-bule mt-6 px-6 py-3 rounded-md transition duration-300 ease-in-out font-semibold hover:bg-principal focus:outline-none focus:ring-2 focus:ring-principal focus:ring-offset-2">
             {loading ? "Enviando..." : "Quero Criar Meu Site!"}
           </button>
