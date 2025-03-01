@@ -3,7 +3,7 @@ import { BiBriefcase, BiBook, BiBuilding, BiCapsule } from "react-icons/bi";
 const features = [
   { 
     icon: <BiBriefcase className="text-principal text-5xl drop-shadow-[0_0_10px_]" />, 
-    title: "Profissionais Autônomos", 
+    title: "Autônomos", 
     description: "Se você é advogado, designer, médico, dentista, nutricionista ou atua de forma independente, uma plataforma profissional pode ampliar sua presença digital, atrair mais clientes e fortalecer sua autoridade no mercado." 
   },
   { 
@@ -18,14 +18,14 @@ const features = [
   },
   { 
     icon: <BiCapsule className="text-claro text-5xl drop-shadow-[0_0_10px_#9e9e9e]" />, 
-    title: "E-commerce e Produtos", 
+    title: "E-commerce", 
     description: "Soluções personalizadas para quem vende produtos físicos ou digitais, garantindo uma experiência de compra otimizada e conversões elevadas." 
   },
 ];
 
 export default function FeaturesSection() {
   return (
-    <section className="bg-black py-16 flex flex-col items-center justify-center">
+    <section id="publico-alvo" className="bg-black py-16 flex flex-col items-center justify-center">
 
       
       {/* Container principal */}

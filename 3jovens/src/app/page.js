@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Navbar from "./components/NavBar";
 import HeroSection from "./components/HeroSection";
 import FeaturesSection from "./components/FeatureSection";
 import CTASection from "./components/CTASection";
@@ -11,6 +12,7 @@ import Depoimentos from "./components/Depoimentos";
 export default function Home() {
   return (
     <>
+      <Navbar />
       <HeroSection />
       <FeaturesSection />
       <Portifolio /> 

@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 /* Variáveis Globais */
 :root {
   --border-color: linear-gradient(-45deg, #6121ff, #7e03aa, #937cff);

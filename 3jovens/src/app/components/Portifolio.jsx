@@ -23,7 +23,7 @@ export default function Portfolio() {
   ];
 
   return (
-    <section className="relative bg-black text-claro py-16 min-h-screen  overflow-hidden">
+    <section id="portifolio" className="relative bg-black text-claro py-16 min-h-screen  overflow-hidden">
       {/* Linha decorativa de ponta a ponta */}
       <div className="absolute left-0 w-full z-10">
         <svg width="100%" height="50" viewBox="0 0 1920 50" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -7,13 +7,13 @@ const features = [
   { icon: <FaHeadset className="text-claro text-5xl drop-shadow-[0_0_10px_#7F4DFF]" />, title: "Reuniões Semanais", description: "Realizamos reuniões semanais para garantir o progresso do projeto, entender suas necessidades e alinhar expectativas." },
   { icon: <FaCalendarCheck className="text-principal text-5xl drop-shadow-[0_0_10px_]" />, title: "Alta Qualidade", description: "Cada página é projetada com foco em performance, usabilidade e design moderno para garantir uma navegação impecável." },
   { icon: <FaCheckCircle className="text-lime-400 text-5xl drop-shadow-[0_0_10px_#5CF559]" />, title: "Layout Exclusivo", description: "Criamos layouts únicos e personalizados para cada cliente, garantindo uma identidade visual autêntica e marcante." },
-  { icon: <FaSlidersH className="text-[#6121ff] text-5xl drop-shadow-[0_0_10px_#7F4DFF]" />, title: "Customização Completa", description: "Oferecemos total liberdade para personalizar todas as funcionalidades e design do seu site, de acordo com suas preferências." },
-  { icon: <FaImage className="text-claro text-5xl drop-shadow-[0_0_10px_#7F4DFF]" />, title: "Imagens Personalizadas", description: "Criamos imagens exclusivas para o seu site, proporcionando uma identidade visual única e impactante para sua marca." },
+  { icon: <FaSlidersH className="text-[#6121ff] text-5xl drop-shadow-[0_0_10px_#7F4DFF]" />, title: "Customização", description: "Oferecemos total liberdade para personalizar todas as funcionalidades e design do seu site, de acordo com suas preferências." },
+  { icon: <FaImage className="text-claro text-5xl drop-shadow-[0_0_10px_#7F4DFF]" />, title: "Personalização", description: "Criamos imagens exclusivas para o seu site, proporcionando uma identidade visual única e impactante para sua marca." },
 ];
 
 export default function FeaturesSection() {
   return (
-    <section className="bg-black py-16 flex flex-col items-center justify-center">
+    <section id="features" className="bg-black py-16 flex flex-col items-center justify-center">
       {/* Título da Seção */}
       <h2 className="text-3xl sm:text-4xl font-bold text-white mb-12 text-center leading-tight drop-shadow-lg">
         Por Que Escolher Nossos <span className="text-principal">Serviços?</span>
