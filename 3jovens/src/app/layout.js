@@ -1,5 +1,10 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "@fontsource/poppins"; // Importa todos os pesos padrão
+import "@fontsource/poppins/400.css"; // Regular
+import "@fontsource/poppins/500.css"; // Medium
+import "@fontsource/poppins/700.css"; // Bold
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
