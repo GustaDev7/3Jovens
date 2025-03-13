@@ -95,7 +95,7 @@ export default function Formulario() {
     setMessageType("");
 
     try {
-      const res = await fetch("https://lorrade-be.vercel.app/enviar-email", {
+      const res = await fetch("https://3jovensapi.vercel.app/enviar-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

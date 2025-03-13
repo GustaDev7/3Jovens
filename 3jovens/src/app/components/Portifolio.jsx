@@ -1,4 +1,5 @@
 "use client";
+import { Link } from "react-scroll";
 
 export default function Portfolio() {
   const projects = [
@@ -6,19 +7,19 @@ export default function Portfolio() {
       category: "PLATAFORMA DE CURSOS",
       title: "Cetma Educacional",
       image: "/cetma.png",
-      link: "#",
+      link: "https://cetmaeducacional.com.br",
     },
     {
       category: "SITE INSTITUCIONAL",
       title: "Gamboa Ação",
       image: "/gamboa.png",
-      link: "#",
+      link: "https://www.gamboaacao.org.br",
     },
     {
       category: "LANDING PAGE",
       title: "Dr. Lorrane Azevedo",
       image: "/lorrane.png",
-      link: "#",
+      link: "https://lorraneazevedo.com",
     },
   ];
 
@@ -83,9 +84,13 @@ export default function Portfolio() {
 
       {/* Botão "Veja mais!" */}
       <div className="mt-10 flex justify-center">
-        <button className="btn w-full max-w-xs bg-blue-500 mt-6 px-6 py-3 rounded-md transition duration-300 ease-in-out font-medium hover:bg-principal focus:outline-none focus:ring-2 focus:ring-principal focus:ring-offset-2">
+        <Link
+          to="formulario"
+          smooth={true}
+          duration={500}
+          className="btn w-full max-w-xs bg-blue-500 mt-6 px-6 py-3 rounded-md transition duration-300 ease-in-out font-medium hover:bg-principal focus:outline-none focus:ring-2 focus:ring-principal focus:ring-offset-2">
           ENTRE EM CONTATO
-        </button>
+        </Link>
       </div>
     </section>
   );
