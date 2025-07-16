@@ -28,15 +28,42 @@ const features = [
 
 export default function FeaturesSection() {
   return (
-    <section id="publico-alvo" className="bg-black py-16 flex flex-col items-center justify-center">
+       <section id="publico-alvo" className="relative bg-black py-20 overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-900/50 via-black to-gray-900/50"></div>
+      
+      {/* Animated Background Orbs */}
+      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      <div className="absolute top-1/2 right-1/3 w-48 h-48 bg-lime-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+      <div className="absolute bottom-1/3 left-1/3 w-72 h-72 bg-orange-500/10 rounded-full blur-3xl animate-pulse delay-750"></div>
 
+      {/* Grid Pattern Overlay */}
+      <div className="absolute inset-0 opacity-20" style={{
+        backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0)`,
+        backgroundSize: '40px 40px'
+      }}></div>
 
       {/* Container principal */}
-      <div className="container bg-gradient-to-t from-black via-slate-950 to-black py-20 card mx-auto px-6 flex flex-col items-center">
-        {/* Título da Seção */}
-        <h2 className="text-3xl sm:text-4xl font-bold text-white mb-12 text-center leading-tight drop-shadow-lg">
-          Para quem são nossas <span className="text-principal">soluções?</span>
-        </h2>
+      <div className="relative z-10 container mx-auto px-6 flex flex-col items-center">
+        {/* Header Section */}
+        <div className="text-center mb-16 max-w-4xl">
+          <div className="inline-block px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full border border-cyan-400/30 mb-6">
+            <span className="text-cyan-400 font-medium text-sm tracking-wide">NOSSO PÚBLICO</span>
+          </div>
+          
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            Para quem são nossas{" "}
+            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-lime-400 bg-clip-text text-transparent">
+              soluções?
+            </span>
+          </h2>
+          
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
+            Desenvolvemos soluções digitais personalizadas para diferentes tipos de negócios, 
+            sempre focando em resultados e experiência do usuário.
+          </p>
+        </div>
         {/* Grid de Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-white w-full">
           {features.map((feature, index) => (

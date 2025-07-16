@@ -15,8 +15,7 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <FeaturesSection />
-      <Portifolio /> 
-      <PublicoAlvo />   
+      <Portifolio />
       <CTASection />
       <Depoimentos />
       <FAQAccordion />

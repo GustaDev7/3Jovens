@@ -1,7 +1,7 @@
-"use client"
-
+"use client";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-scroll";
+import { motion } from "framer-motion";
 
 export default function Footer() {
   const menuItems = [
@@ -13,74 +13,133 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative bg-gradient-to-r from-gray-900 to-black text-white py-12 overflow-hidden">
-      {/* Luzes animadas */}
-      <div className="absolute top-[10%] left-[20%] w-[250px] h-[350px] bg-principal rounded-full blur-[100px] opacity-20 animate-pulseSlow pointer-events-none z-0 sm:w-[400px] sm:h-[500px]" />
-      <div className="absolute top-[50%] right-[10%] w-[300px] h-[300px] bg-[#7F4DFF] rounded-full blur-[120px] opacity-20 animate-pulseMedium pointer-events-none z-0 sm:w-[500px] sm:h-[500px]" />
-      <div className="absolute bottom-[10%] left-[50%] -translate-x-1/2 w-[350px] h-[250px] bg-principal rounded-full blur-[100px] opacity-20 animate-pulseFast pointer-events-none z-0 sm:w-[500px] sm:h-[400px]" />
-
-      <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left relative z-10">
-        {/* Seção de Logo e Descrição */}
-        <div className="border-b border-gray-700 pb-6 md:border-none md:pb-0">
-          <div className="pb-6 md:pb-0 md:pr-6">
-            <img
-              src="/jovens.png"
-              alt="Logo"
-              className="mx-auto md:mx-0 w-auto h-auto max-w-[200px]"
-            />
-          </div>
-        </div>
-
-        {/* Seção de Links */}
-        <div className="border-b border-gray-700 pb-6 md:border-none md:pb-0">
-          <h2 className="text-2xl text-claro font-semibold mb-6">Navegação</h2>
-          <ul className="space-y-3 text-gray-300">
-            {menuItems.map((item) => (
-              <li key={item.name}>
-                <Link
-                  to={item.href}
-                  smooth={true}
-                  duration={500}
-                  className="hover:text-principal transition-all duration-300 transform hover:scale-110 cursor-pointer"
-                >
-                  {item.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Seção de Redes Sociais */}
-        <div>
-          <h2 className="text-2xl font-semibold text-claro mb-6">Conecte-se Conosco</h2>
-          <div className="flex justify-center md:justify-start gap-6">
-            <a
-              href="https://www.instagram.com/os3jovens/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-2xl text-pink-500 hover:text-white transition-all duration-300 transform hover:scale-110"
-            >
-              <FaInstagram />
-            </a>
-            <a
-              href="https://wa.link/3u5tn2"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-2xl text-green-500 hover:text-white transition-all duration-300 transform hover:scale-110"
-            >
-              <FaWhatsapp />
-            </a>
-          </div>
-        </div>
+    <footer className="relative bg-slate-950 text-white">
+      {/* Background sutil */}
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-900 to-slate-950">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.03),transparent_70%)]"></div>
       </div>
 
-      {/* Linha Divisória Iluminada */}
-      <div
-        id="formulario"
-        className="relative border-t border-transparent mt-12 mx-6 pt-6 text-center text-gray-500 text-sm z-10"
-        style={{ borderImage: "linear-gradient(to left, #7F4DFF, #6121ff)", borderImageSlice: 1 }}
-      >
-        &copy; 2025 3 Jovens. Todos os direitos reservados.
+      {/* Grid de pontos discreto */}
+      <div className="absolute inset-0 opacity-[0.02]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.8)_1px,transparent_0)] bg-[size:32px_32px]"></div>
+      </div>
+
+      <div className="relative z-10 max-w-6xl mx-auto px-6">
+        {/* Conteúdo principal */}
+        <div className="py-16 grid grid-cols-1 md:grid-cols-12 gap-8">
+          {/* Logo e descrição */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="md:col-span-5"
+          >
+           
+            <p className="text-slate-400 text-base leading-relaxed mb-8 max-w-sm">
+              Desenvolvemos soluções digitais que transformam ideias em resultados concretos para seu negócio.
+            </p>
+            
+            {/* Redes sociais */}
+            <div className="flex gap-4">
+              <motion.a
+                href="https://www.instagram.com/os3jovens/"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-10 h-10 bg-slate-800 hover:bg-slate-700 rounded-lg flex items-center justify-center transition-all duration-300 group border border-slate-700 hover:border-slate-600"
+              >
+                <FaInstagram className="text-slate-400 group-hover:text-white transition-colors" />
+              </motion.a>
+              
+              <motion.a
+                href="https://wa.link/3u5tn2"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-10 h-10 bg-slate-800 hover:bg-slate-700 rounded-lg flex items-center justify-center transition-all duration-300 group border border-slate-700 hover:border-slate-600"
+              >
+                <FaWhatsapp className="text-slate-400 group-hover:text-white transition-colors" />
+              </motion.a>
+            </div>
+          </motion.div>
+
+          {/* Navegação */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="md:col-span-3"
+          >
+            <h3 className="text-white font-semibold mb-6 text-sm uppercase tracking-wider">
+              Navegação
+            </h3>
+            <ul className="space-y-4">
+              {menuItems.map((item, index) => (
+                <li key={item.name}>
+                  <Link
+                    to={item.href}
+                    smooth={true}
+                    duration={500}
+                    className="text-slate-400 hover:text-white transition-colors duration-300 cursor-pointer text-sm"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* Informações de contato */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="md:col-span-4"
+          >
+            <h3 className="text-white font-semibold mb-6 text-sm uppercase tracking-wider">
+              Contato
+            </h3>
+            <div className="space-y-4">
+              <div className="text-slate-400 text-sm">
+                <p>Entre em contato para discutir</p>
+                <p>seu próximo projeto digital</p>
+              </div>
+              
+              <motion.a
+                href="https://wa.link/3u5tn2"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="inline-flex items-center gap-3 px-6 py-3 bg-principal  rounded-lg text-white text-sm font-medium transition-all duration-300"
+              >
+                <FaWhatsapp className="text-base" />
+                Iniciar conversa
+              </motion.a>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Linha divisória */}
+        <motion.div 
+          initial={{ opacity: 0, scaleX: 0 }}
+          whileInView={{ opacity: 1, scaleX: 1 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="border-t border-slate-800"
+        >
+          <div className="py-6 flex flex-col sm:flex-row justify-center items-center gap-4">
+            <motion.p 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="text-slate-500 text-sm"
+            >
+              © 2025 3 Jovens. Todos os direitos reservados.
+            </motion.p>
+          </div>
+        </motion.div>
       </div>
     </footer>
   );
