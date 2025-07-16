@@ -8,6 +8,7 @@ import Portifolio from "./components/Portifolio";
 import Footer from "./components/Footer";
 import PublicoAlvo from "./components/PublicoAlvo";
 import Depoimentos from "./components/Depoimentos";
+import WhatsAppFloat from "./components/WhatsAppFloat";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Depoimentos />
       <FAQAccordion />
       <Footer />
+      <WhatsAppFloat />
     </>
   );
 }
